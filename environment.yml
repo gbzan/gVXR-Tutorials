@@ -1,0 +1,24 @@
+name: gvxr-tutorials
+channels:
+    - conda-forge
+dependencies:
+    - ipyevents
+    - ipympl
+    - ipywidgets
+    - jupyterlab
+    - matplotlib
+    - mpl-interactions
+    - numpy
+    - pandas
+    - pip
+    - python=3.11
+    - scikit-image
+    - SimpleITK
+    - k3d
+    - pip
+    - pip:
+        - viewscad
+        - xpecgen
+        - git+https://bitbucket.org/spekpy/spekpy_release.git
+        - gvxr>=2.0.7
+
