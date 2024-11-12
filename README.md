@@ -21,7 +21,7 @@ pip install git+https://bitbucket.org/spekpy/spekpy_release.git
 ## Content
 
 - [Test installation](notebooks/test_installation.ipynb): Run the quick test script provided with gVirtualXray's Python package to make sure the installation is working well on your system.
-    
+- [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
 
 <!--
 - Session 1
