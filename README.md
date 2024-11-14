@@ -1,6 +1,18 @@
-# Hands-on training on simulating X-ray images on GPU with ![[gVirtualXray (gVXR)](https://gvirtualxray.sourceforge.io/)](img/Logo-transparent-small.png) 
+# Hands-on training: Simulating X-ray images on GPU with ![[gVirtualXray (gVXR)](https://gvirtualxray.sourceforge.io/)](img/Logo-transparent-small.png) 
 
+## Content of this file
 
+- Installation
+    - Using Conda
+    - Using pip
+- Content of this repository
+    - [Test installation](notebooks/test_installation.ipynb)
+    - [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
+- How to find help
+- How to cite
+- Research excellence
+- User contributions
+      
 ## Installation
 
 ### Using Conda
@@ -18,10 +30,34 @@ pip install matplotlib viewscad xpecgen
 pip install git+https://bitbucket.org/spekpy/spekpy_release.git
 ```
 
-## Content
+## Content of this repository
 
 - [Test installation](notebooks/test_installation.ipynb): Run the quick test script provided with gVirtualXray's Python package to make sure the installation is working well on your system.
-- [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
+- [First X-ray simulation](notebooks/first_xray_simulation.ipynb): Explore the step-by-step notebook to create our first X-ray radiograph. A mono-material object is imaged with a monochromatic source and an ideal detector. We show how to visualise the X-ray radiograph and take a screenshot of the 3D visualisation of the simulation environment.
+
+## How to find help
+
+- Email me (Franck P. Vidal, STFC);
+- Raise an issue on GitHub: [https://github.com/TomographicImaging/gVXR-Tutorials/issues](https://github.com/TomographicImaging/gVXR-Tutorials/issues)
+- Open a ticket on SourceForge: [https://sourceforge.net/p/gvirtualxray/tickets](https://sourceforge.net/p/gvirtualxray/tickets);
+- Use the forum on SourceForge: [https://sourceforge.net/p/gvirtualxray/discussion/](https://sourceforge.net/p/gvirtualxray/discussion/);
+- Subscribe to the mailing list: [https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss](https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss)
+- Check the technical documentation, e.g. calling `help(gvxr)` for help on the Python package or something like `help(gvxr.createNewContext)` for a specific function.
+
+## How to cite
+
+If you use gVXR in your own applications, particularly for research & development, I will be grateful if you could cite the articles as follows:
+
+- **Seminal paper**: Vidal, F. P., Garnier, M., Freud, N., Létang, J. M., and John, N. W., “Simulation of x-ray attenuation on the GPU,” in [Proceedings of Theory and Practice of Computer Graphics 2009](https://diglib.eg.org/collections/916dfc7f-8278-428f-9ae3-c85aeff29595), 25–32, [Eurographics Association](https://www.eg.org/), Cardiff, UK (June 2009). DOI: [10.2312/LocalChapterEvents/TPCG/TPCG09/025-032](https:doi.org/10.2312/LocalChapterEvents/TPCG/TPCG09/025-032)
+- **First reference to gVXR as an opensource software**: Vidal, F. P. and Villard, P.-F., “Development and validation of real-time simulation of x-ray imaging with respiratory motion,” Computerized Medical Imaging and Graphics 49, 1–15 (2016). DOI: [10.1016/j.compmedimag.2015.12.002](https://doi.org/10.1016/j.compmedimag.2015.12.002)
+- **Clinical validation study**: Pointon, J. L., Wen, T., Tugwell-Allsup, J., Sújar, A., Létang, J. M., and Vidal, F. P., “Simulation of x-ray projections on gpu: Benchmarking gvirtualxray with clinically realistic phantoms,” Computer Methods and Programs in Biomedicine 234, 107500 (2023). DOI: [10.1016/j.cmpb.2023.107500](https://doi.org/10.1016/j.cmpb.2023.107500)
+- **Review paper on CT applications**: Vidal, F. P., Afshari, S., Ahmed, S., Atkins, C. Béchet, E., Bellot, A., Bosse, S., Chahid, Y., Chou, C.-Y., Culver, R., Dixon, L., Friemann, J., Garbout, A., Hatton, C., Henry, A., Leblanc, C., Leonardi, A., Létang, J. M., Lipscomb, H., Manchester, T., Meere, B., Middleburgh, S., Mitchell, I., Perera, L., Puig, M., and Tugwell-Allsup, J., “X-ray simulations with gVXR as a useful tool for education, data analysis, set-up of CT scans, and scanner development,” in [Developments in X-Ray Tomography XV, SPIE Optics & Photonics](https://doi.org/10.1117/12.3025315), Volume 13152, [SPIE](https://spie.org/), San Diego, California, United States (Aug 2024). DOI: [10.1117/12.3025315](https:doi.org/10.1117/12.3025315)
+
+## User contributions on our website
+
+We'd like to share user contributions in a new section of gVXR's website [https://gvirtualxray.sourceforge.io/](https://gvirtualxray.sourceforge.io/). If you'd like to showcase your work, please contact me by email (Franck P. Vidal, STFC) or raise an issue on GitHub ([https://github.com/TomographicImaging/gVXR-Tutorials/issues](https://github.com/TomographicImaging/gVXR-Tutorials/issues)).
+
+
 
 <!--
 - Session 1
