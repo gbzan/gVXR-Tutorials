@@ -20,6 +20,9 @@ dependencies:
     - ipp=2021.12
     - astra-toolbox=*=cuda*
     - tigre
+    - progressbar
+    - urllib
+    - zipfile
     - pip
     - pip:
         - viewscad
