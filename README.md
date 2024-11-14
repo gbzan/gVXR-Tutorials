@@ -1,5 +1,7 @@
 # Hands-on training: Simulating X-ray images on GPU with ![[gVirtualXray (gVXR)](https://gvirtualxray.sourceforge.io/)](img/Logo-transparent-small.png) 
 
+![Simulated radiograph of the Lungman phantom](notebooks/output_data/lungman/k3d_screenshot.png)
+
 ## Content of this file
 
 - Installation
