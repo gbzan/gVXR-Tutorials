@@ -13,13 +13,13 @@ dependencies:
     - numpy
     - pandas
     - python=3.11
-    - scikit-image
-    - SimpleITK
+    # - scikit-image
+    # - SimpleITK
     - k3d
-    - cil=24.2.0
-    - ipp=2021.12
-    - astra-toolbox=*=cuda*
-    - tigre
+    # - cil=24.2.0
+    # - ipp=2021.12
+    # - astra-toolbox=*=cuda*
+    # - tigre
     - progressbar
     - pip
     - pip:
