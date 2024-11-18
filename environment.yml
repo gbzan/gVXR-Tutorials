@@ -27,6 +27,6 @@ dependencies:
         - zipfile
         - viewscad
         - xpecgen
-        - git+https://bitbucket.org/spekpy/spekpy_release.git
+        # - git+https://bitbucket.org/spekpy/spekpy_release.git
         - gvxr>=2.0.8
 
