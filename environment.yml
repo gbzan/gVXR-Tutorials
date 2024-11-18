@@ -23,8 +23,8 @@ dependencies:
     - progressbar
     - pip
     - pip:
-        - urllib3
-        - zipfile
+        # - urllib3
+        # - zipfile
         - viewscad
         - xpecgen
         # - git+https://bitbucket.org/spekpy/spekpy_release.git
