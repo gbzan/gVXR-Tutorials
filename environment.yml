@@ -23,7 +23,7 @@ dependencies:
     - progressbar
     - pip
     - pip:
-        - urllib
+        - urllib3
         - zipfile
         - viewscad
         - xpecgen
