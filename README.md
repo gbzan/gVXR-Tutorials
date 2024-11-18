@@ -2,6 +2,8 @@
 
 ![Simulated radiograph of the Lungman phantom](notebooks/output_data/lungman/k3d_screenshot.png)
 
+![PyPI Downloads](https://static.pepy.tech/badge/gvxr)
+
 ## Content of this file
 
 - Installation
