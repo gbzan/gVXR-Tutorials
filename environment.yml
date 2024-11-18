@@ -21,10 +21,10 @@ dependencies:
     - astra-toolbox=*=cuda*
     - tigre
     - progressbar
-    - urllib
-    - zipfile
     - pip
     - pip:
+        - urllib
+        - zipfile
         - viewscad
         - xpecgen
         - git+https://bitbucket.org/spekpy/spekpy_release.git
