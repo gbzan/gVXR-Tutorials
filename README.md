@@ -2,7 +2,7 @@
 
 ![Simulated radiograph of the Lungman phantom](notebooks/output_data/lungman/k3d_screenshot.png)
 
-![PyPI Downloads](https://static.pepy.tech/badge/gvxr)
+![PyPI Downloads](https://static.pepy.tech/badge/gvxr) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TomographicImaging/gVXR-Tutorials/HEAD)
 
 ## Content of this file
 
