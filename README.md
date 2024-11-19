@@ -13,6 +13,8 @@
     - [Test installation](notebooks/test_installation.ipynb) 
     - [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
 - How to find help
+- How to report bugs/request a new feature
+- Q&A
 - How to cite
 - Research excellence
 - User contributions
@@ -47,6 +49,17 @@ pip install git+https://bitbucket.org/spekpy/spekpy_release.git
 - Use the forum on SourceForge: [https://sourceforge.net/p/gvirtualxray/discussion/](https://sourceforge.net/p/gvirtualxray/discussion/);
 - Subscribe to the mailing list: [https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss](https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss)
 - Check the technical documentation, e.g. calling `help(gvxr)` for help on the Python package or something like `help(gvxr.createNewContext)` for a specific function.
+
+## How to report bugs or request a new feature
+
+- Email me (Franck P. Vidal, STFC);
+- Raise an issue on GitHub: [https://github.com/TomographicImaging/gVXR-Tutorials/issues](https://github.com/TomographicImaging/gVXR-Tutorials/issues)
+- Open a ticket on SourceForge: [https://sourceforge.net/p/gvirtualxray/tickets](https://sourceforge.net/p/gvirtualxray/tickets);
+- Use the forum on SourceForge: [https://sourceforge.net/p/gvirtualxray/discussion/](https://sourceforge.net/p/gvirtualxray/discussion/);
+
+## Q&A
+
+See [Q&A](QnA.md).
 
 ## How to cite
 
