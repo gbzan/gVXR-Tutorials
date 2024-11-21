@@ -10,8 +10,10 @@
     - Using Conda
     - Using pip
 - Content of this repository
+    - [Cheat sheet](CHEAT_SHEET.md)
     - [Test installation](notebooks/test_installation.ipynb) 
     - [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
+    - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb)
 - How to find help
 - How to cite
 - Research excellence
@@ -36,8 +38,10 @@ pip install git+https://bitbucket.org/spekpy/spekpy_release.git
 
 ## Content of this repository
 
+- [Cheat sheet](CHEAT_SHEET.md): This document list all gVXR's functions used in the tutorial notebooks. It also includes the help messages to describe the purpose of each function.
 - [Test installation](notebooks/test_installation.ipynb): Run the quick test script provided with gVirtualXray's Python package to make sure the installation is working well on your system. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/test_installation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 - [First X-ray simulation](notebooks/first_xray_simulation.ipynb): Explore the step-by-step notebook to create our first X-ray radiograph. A mono-material object is imaged with a monochromatic source and an ideal detector. We show how to visualise the X-ray radiograph and take a screenshot of the 3D visualisation of the simulation environment. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/first_xray_simulation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb): Using the knowledge learnt in [First X-ray simulation](notebooks/first_xray_simulation.ipynb), initialise your own simulation to create a radiograph of the Lungman phantom. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/multi_material-lungman_phantom.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ## How to find help
 
@@ -47,6 +51,7 @@ pip install git+https://bitbucket.org/spekpy/spekpy_release.git
 - Use the forum on SourceForge: [https://sourceforge.net/p/gvirtualxray/discussion/](https://sourceforge.net/p/gvirtualxray/discussion/);
 - Subscribe to the mailing list: [https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss](https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss)
 - Check the technical documentation, e.g. calling `help(gvxr)` for help on the Python package or something like `help(gvxr.createNewContext)` for a specific function.
+- Look at the [cheat sheet](CHEAT_SHEET.md) that lists all the gVXR's functions used in the tutorial notebooks. It also includes the help messages to describe the purpose of each function.
 
 ## How to cite
 
