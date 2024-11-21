@@ -2,7 +2,7 @@
 
 ![Simulated radiograph of the Lungman phantom](notebooks/output_data/lungman/k3d_screenshot.png)
 
-![PyPI Downloads](https://static.pepy.tech/badge/gvxr)
+![PyPI Downloads](https://static.pepy.tech/badge/gvxr) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TomographicImaging/gVXR-Tutorials/HEAD)
 
 ## Content of this file
 
@@ -15,6 +15,8 @@
     - [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
     - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb)
 - How to find help
+- How to report bugs/request a new feature
+- Q&A
 - How to cite
 - Research excellence
 - User contributions
@@ -52,6 +54,17 @@ pip install git+https://bitbucket.org/spekpy/spekpy_release.git
 - Subscribe to the mailing list: [https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss](https://sourceforge.net/projects/gvirtualxray/lists/gvirtualxray-discuss)
 - Check the technical documentation, e.g. calling `help(gvxr)` for help on the Python package or something like `help(gvxr.createNewContext)` for a specific function.
 - Look at the [cheat sheet](CHEAT_SHEET.md) that lists all the gVXR's functions used in the tutorial notebooks. It also includes the help messages to describe the purpose of each function.
+
+## How to report bugs or request a new feature
+
+- Email me (Franck P. Vidal, STFC);
+- Raise an issue on GitHub: [https://github.com/TomographicImaging/gVXR-Tutorials/issues](https://github.com/TomographicImaging/gVXR-Tutorials/issues)
+- Open a ticket on SourceForge: [https://sourceforge.net/p/gvirtualxray/tickets](https://sourceforge.net/p/gvirtualxray/tickets);
+- Use the forum on SourceForge: [https://sourceforge.net/p/gvirtualxray/discussion/](https://sourceforge.net/p/gvirtualxray/discussion/);
+
+## Q&A
+
+See [Q&A](QnA.md).
 
 ## How to cite
 
