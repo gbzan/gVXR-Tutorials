@@ -1,0 +1,1 @@
+gvxr.setMonoChromatic(90, "keV", 16000);
