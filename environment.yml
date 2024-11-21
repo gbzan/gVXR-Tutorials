@@ -14,7 +14,7 @@ dependencies:
     - pandas
     - python=3.11
     # - scikit-image
-    # - SimpleITK
+    - SimpleITK
     - k3d
     # - cil=24.2.0
     # - ipp=2021.12
