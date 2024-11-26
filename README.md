@@ -2,7 +2,7 @@
 
 ![Simulated radiograph of the Lungman phantom](notebooks/output_data/lungman/k3d_screenshot.png)
 
-![PyPI Downloads](https://static.pepy.tech/badge/gvxr) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TomographicImaging/gVXR-Tutorials/HEAD)
+![PyPI Downloads](https://static.pepy.tech/badge/gvxr) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main)    <!--[![Open in Code Ocean](https://codeocean.com/codeocean-assets/badge/open-in-code-ocean.svg)](https://codeocean.com/capsule/CAPSULE_NUMBER_HERE/tree)--> [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TomographicImaging/gVXR-Tutorials/HEAD)
 
 ## Content of this file
 
