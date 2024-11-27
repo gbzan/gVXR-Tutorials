@@ -13,6 +13,7 @@
     - [Cheat sheet](CHEAT_SHEET.md)
     - [Test installation](notebooks/test_installation.ipynb) 
     - [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
+    - [3D visualisation](notebooks/visualisation.ipynb)
     - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb)
 - How to find help
 - How to report bugs/request a new feature
@@ -42,6 +43,7 @@ pip install matplotlib viewscad xpecgen spekpy SimpleITK
 - [Cheat sheet](CHEAT_SHEET.md): This document list all gVXR's functions used in the tutorial notebooks. It also includes the help messages to describe the purpose of each function.
 - [Test installation](notebooks/test_installation.ipynb): Run the quick test script provided with gVirtualXray's Python package to make sure the installation is working well on your system. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/test_installation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 - [First X-ray simulation](notebooks/first_xray_simulation.ipynb): Explore the step-by-step notebook to create our first X-ray radiograph. A mono-material object is imaged with a monochromatic source and an ideal detector. We show how to visualise the X-ray radiograph and take a screenshot of the 3D visualisation of the simulation environment. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/first_xray_simulation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- [3D visualisation](notebooks/visualisation.ipynb): Get familiar with the three different 3D visualisation method provided with gVXR, i) K3D to interactively visualise the 3D scene in a Jupyter widget, ii) a customisable static 3D visualisation, and iii) an interactive 3D visualisation window. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/visualisation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb): Using the knowledge learnt in [First X-ray simulation](notebooks/first_xray_simulation.ipynb), initialise your own simulation to create a radiograph of the Lungman phantom. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/multi_material-lungman_phantom.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ## How to find help
