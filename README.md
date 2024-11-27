@@ -35,7 +35,7 @@ conda activate gvxr-tutorials
 
 ```bash
 pip install gvxr
-pip install matplotlib viewscad xpecgen spekpy SimpleITK
+pip install matplotlib viewscad xpecgen spekpy SimpleITK k3d
 ```
 
 ## Content of this repository
