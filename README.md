@@ -15,6 +15,16 @@
     - [First X-ray simulation](notebooks/first_xray_simulation.ipynb)
     - [3D visualisation](notebooks/visualisation.ipynb)
     - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb)
+    - Ideal CT scan
+    - Creating, combining and moving 3D objects
+    - Built-in phantoms
+    - Multi-material samples using chemical elements, mixtures and compounds
+    - Source types and paramaters
+    - Detector paramaters
+    - Realistic CT scans
+    - Artefacts in CT images
+    - Spectral CT imaging
+    - 2D-3D registration of a clinical digital radiograph
 - How to find help
 - How to report bugs/request a new feature
 - Q&A
@@ -45,6 +55,16 @@ pip install matplotlib viewscad xpecgen spekpy SimpleITK k3d
 - [First X-ray simulation](notebooks/first_xray_simulation.ipynb): Explore the step-by-step notebook to create our first X-ray radiograph. A mono-material object is imaged with a monochromatic source and an ideal detector. We show how to visualise the X-ray radiograph and take a screenshot of the 3D visualisation of the simulation environment. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/first_xray_simulation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 - [3D visualisation](notebooks/visualisation.ipynb): Get familiar with the three different 3D visualisation method provided with gVXR, i) K3D to interactively visualise the 3D scene in a Jupyter widget, ii) a customisable static 3D visualisation, and iii) an interactive 3D visualisation window. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/visualisation.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb): Using the knowledge learnt in [First X-ray simulation](notebooks/first_xray_simulation.ipynb), initialise your own simulation to create a radiograph of the Lungman phantom. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/multi_material-lungman_phantom.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- Ideal CT scan: Simulate a CT scan acquisition with gVXR and reconstruct the CT volume with CIL
+- Creating, combining and moving 3D objects: Exploit gVXR built-in functionality to create our own model by combining spheres, cuboids and cylinders.
+- Built-in phantoms: spheres in cylinders, foam, step wedge
+- Multi-material samples using chemical elements, mixtures and compounds
+- Source types and paramaters: Differentiate between source types (parallel beam, e.g. synchrotron, and cone-beam, e.g. X-ray tube). For X-ray tube add extra levels of realism with the focal spot and polychromatic spectrum. Introduce the notion of magnification to compute the pixel size in radiography.
+- Detector paramaters: Revisit the notion of pixel size and add extra levels of realism with the point spread function and scintillator material.
+- Realistic CT scans: Using some of the knowledge learnt in the notebooks above, create realistic CT scan acquisitions for both synchrotron and labCT.
+- Artefacts in CT images: Explore the common source of artefact in CT images.
+- Spectral CT imaging:
+- 2D-3D registration of a clinical digital radiograph:
 
 ## How to find help
 
