@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<unireconstruction xactrevision=" 22.11 2022-12-09" version="1.1">
+    <conebeam>
+        <reconstruct format="16 bit Tiff" iterations="1" methode="Filtered Backprojection (Tomography)" filterValue="80" sliceViewDirection="Y" filter="Tukey"/>
+        <volume_acquisition>
+            <voxelSize Z="0.0175384" Y="0.0175384" X="0.0175384"/>
+            <size Z="1843" Y="1658" X="1843"/>
+            <offset Z="0.00" Y="-166.603" X="0.00"/>
+            <testSlice Z="921" Y="830" X="921"/>
+            <rotate Z="0" Y="0" X="0"/>
+        </volume_acquisition>
+        <volume>
+            <voxelSize Z="0.0175384" Y="0.0175384" X="0.0175384"/>
+            <size Z="1843" Y="1658" X="1843"/>
+            <offset Z="0.00" Y="-166.603" X="0.00"/>
+            <testSlice Z="921" Y="830" X="921"/>
+            <rotate Z="0" Y="0" X="0"/>
+        </volume>
+        <profile images="1472" acquisition="Normal" turns="1">
+            <turnParam index="0" nbImages="1472">
+                <avr Imager_2="4"/>
+            </turnParam>
+        </profile>
+        <acquisitioninfo>
+            <xray type="X-Ray Source" current="199" voltage="160"/>
+            <geometry sod="60.9223" sdd="521.047"/>
+        </acquisitioninfo>
+    </conebeam>
+</unireconstruction>
