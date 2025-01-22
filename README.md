@@ -17,6 +17,7 @@
     - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb)
     <!-- - [Magnification](notebooks/magnification.ipynb) -->
     - [Ideal CT scan](notebooks/multi_material-CT_scan.ipynb)
+    - [Low dose CT scan](notebooks/multi_material-CT_scan-low_dose.ipynb)
     - Creating, combining and moving 3D objects
     - Built-in phantoms
     - Multi-material samples using chemical elements, mixtures and compounds
@@ -58,13 +59,16 @@ pip install matplotlib viewscad xpecgen spekpy SimpleITK k3d
 - [Multi-material anatomical example](notebooks/multi_material-lungman_phantom.ipynb): Using the knowledge learnt in [First X-ray simulation](notebooks/first_xray_simulation.ipynb), initialise your own simulation to create a radiograph of the Lungman phantom. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/multi_material-lungman_phantom.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 <!-- - [Magnification](notebooks/magnification.ipynb): ADD TEXT HERE<a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/magnification.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> -->
 - [Ideal CT scan](notebooks/multi_material-CT_scan.ipynb): Simulate a CT scan acquisition with gVXR and reconstruct the CT volume with CIL. As a bonus, we explore how to visualise the data in 2D using CIL's widgets, and also using 3D volume rendering with K3D. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/multi_material-CT_scan.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- [Low dose CT scan](notebooks/multi_material-CT_scan-low_dose.ipynb): Simulate a low-dose CT scan acquisition with gVXR and reconstruct the CT volume with CIL using both the famous FDK algorithm and an iterative method with TV-regularisation. <a href="https://colab.research.google.com/github/TomographicImaging/gVXR-Tutorials/blob/main/notebooks/multi_material-CT_scan-low_dose.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 - Creating, combining and moving 3D objects: Exploit gVXR built-in functionality to create our own model by combining spheres, cuboids and cylinders.
 - Built-in phantoms: spheres in cylinders, foam, step wedge
 - Multi-material samples using chemical elements, mixtures and compounds
 - Source types and paramaters: Differentiate between source types (parallel beam, e.g. synchrotron, and cone-beam, e.g. X-ray tube). For X-ray tube add extra levels of realism with the focal spot and polychromatic spectrum. Introduce the notion of magnification to compute the pixel size in radiography.
 - Detector paramaters: Revisit the notion of pixel size and add extra levels of realism with the point spread function and scintillator material.
 - Realistic CT scans: Using some of the knowledge learnt in the notebooks above, create realistic CT scan acquisitions for both synchrotron and labCT.
-- Artefacts in CT images: Explore the common source of artefact in CT images.
+- Artefacts in CT images: Explore the common source of artefact in CT images:
+    - For **aliasing artefacts**, you may look at [Ideal CT scan](notebooks/multi_material-CT_scan.ipynb) where the number of projections was far too low.
+    - For **low dose** CT scans, you may look at [Low dose CT scan](notebooks/multi_material-CT_scan-low_dose.ipynb) where you can control the noise level and the number of projections.
 - Spectral CT imaging:
 - 2D-3D registration of a clinical digital radiograph:
 
