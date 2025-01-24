@@ -1,0 +1,137 @@
+# -*- coding: utf-8 -*-
+#
+#  Copyright 2025 United Kingdom Research and Innovation
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+#   Authored by:    Franck Vidal (UKRI-STFC)
+
+
+import os
+
+import urllib.request
+import progressbar
+import zipfile
+
+from gvxrPython3 import gvxr
+
+
+def downloadLungman():
+
+    # where to save the data
+    lungman_path = os.path.join("output_data", "lungman");
+    mesh_path = os.path.join(lungman_path, "MESHES");
+    if not os.path.exists(mesh_path):
+        os.makedirs(mesh_path);    
+
+    # Download the data from [Zenodo](https://zenodo.org/records/10782644).
+    zip_file_url = "https://zenodo.org/records/10782644/files/lungman_data.zip?download=1";
+
+    zip_fname = os.path.join(lungman_path, "lungman_data.zip");
+
+    if not os.path.exists(zip_fname):
+        pbar = None;
+        def show_progress(block_num, block_size, total_size):
+            global pbar
+            if pbar is None:
+                pbar = progressbar.ProgressBar(maxval=total_size)
+                pbar.start()
+        
+            downloaded = block_num * block_size
+            if downloaded < total_size:
+                pbar.update(downloaded)
+            else:
+                pbar.finish()
+                pbar = None
+                
+        print("Download the file (%s) from %s\n" % (zip_fname, zip_file_url))
+        urllib.request.urlretrieve(zip_file_url, zip_fname, show_progress)
+
+    return zip_fname, lungman_path, mesh_path
+
+def extractLungmanSTL(zip_fname, lungman_path):
+    stl_fname_set = [];
+
+    with zipfile.ZipFile(zip_fname) as z:
+        for fname in z.namelist():
+            if ".stl" in fname:
+                stl_fname = os.path.join(lungman_path, fname);
+                stl_fname_set.append(stl_fname);
+                
+                if not os.path.exists(stl_fname):
+                    print("Extract %s" % stl_fname);
+                    with open(stl_fname, 'wb') as f:
+                        f.write(z.read(fname));
+
+    return stl_fname_set;
+
+
+def extractLungmanCT(zip_fname, lungman_path):
+    DICOM_fname_set = [];
+
+    DICOM_path = "CD2/DICOM/ST000000/SE000003/";
+
+    for DICOM_slice in ["CT000257", "CT000258", "CT000238", "CT000382"]:
+
+        input_DICOM_fname = os.path.join(DICOM_path, DICOM_slice);
+        output_DICOM_fname = os.path.join(lungman_path, DICOM_slice + ".dcm");
+        DICOM_fname_set.append(output_DICOM_fname);
+
+        with zipfile.ZipFile(zip_fname) as z:
+            if not os.path.exists(output_DICOM_fname):
+                print("Extract %s" % input_DICOM_fname);
+                with open(output_DICOM_fname, 'wb') as f:
+                    f.write(z.read(input_DICOM_fname));
+
+    return DICOM_fname_set;
+
+
+def loadLungmanMeshes(mesh_path):
+    gvxr.removePolygonMeshesFromXRayRenderer();
+
+    gvxr.emptyMesh("lungman");
+
+    geometry_set = {
+        "bronchioles": {"HU": -419.57144, "Colour" : [0, 240, 240, 0.08]},
+        "bronchus": {"HU": -40.36795, "Colour" : [0, 62, 186, 0.4]},
+        "trachea": {"HU": -914.32916, "Colour" : [170, 85, 255, 0.4]},
+        "diaphram": {"HU": -12.778751, "Colour" : [255, 85, 127, 1]},
+        "skin": {"HU": -12.121676, "Colour" : [125, 125, 125, 0.17]},
+        "heart": {"HU": 28.384626, "Colour" : [255, 0, 0, 1]},
+        "sheets_low": {"HU": -158.2706, "Colour" : [193, 193, 193, 1]},
+        "sheets_med": {"HU": 203.39578, "Colour" : [193, 193, 193, 1]},
+        "sheets_high": {"HU": 324.9135, "Colour" : [193, 193, 193, 1]},
+        "tumours_630HU": {"HU": -658.61346, "Colour" : [138, 0, 0, 1]},
+        "tumours_100HU": {"HU": 83.32481, "Colour" : [255, 85, 0, 1]},
+        "spine-hard-650": {"HU": 857.8602, "Colour" : [255, 255, 127, 1]},
+        "spine-soft-650": {"HU": 375.58865, "Colour" : [255, 255, 127, 1]},
+        "scaps-hard-550": {"HU": 709.09717, "Colour" : [255, 255, 127, 1]},
+        "scaps-soft-550": {"HU": 372.82138, "Colour" : [255, 255, 127, 1]},
+        "sternum-hard-550": {"HU": 789.6037, "Colour" : [255, 255, 127, 1]},
+        "sternum-soft-550": {"HU": 378.79736, "Colour" : [255, 255, 127, 1]},
+        "clavicle-hard-700": {"HU": 778.28, "Colour" : [255, 255, 127, 1]},
+        "clavicle-soft-700": {"HU": 261.89047, "Colour" : [255, 255, 127, 1]},
+    }
+
+    for label in geometry_set:
+        if "sheet" not in label:
+            gvxr.loadMeshFile(label, os.path.join(mesh_path, label + ".stl"), "mm", True, "root");
+            gvxr.setHounsfieldUnit(label, round(geometry_set[label]["HU"]));
+            gvxr.setColour(label,
+                geometry_set[label]["Colour"][0] / 255.0,
+                geometry_set[label]["Colour"][1] / 255.0,
+                geometry_set[label]["Colour"][2] / 255.0,
+                geometry_set[label]["Colour"][3]);
+
+            # We translate the geometry to make sure the detector is not within the patient
+            # gvxr.translateNode(label, 0, -118, 0, "mm")
