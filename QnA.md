@@ -17,3 +17,6 @@
       ```
       
     - 
+
+
+- My sample consists of different components made from different materials. I've created a .stl 3D model of my sample. How can I assign different materials to different parts of the 3D model via gVXR?
