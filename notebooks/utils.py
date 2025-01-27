@@ -25,6 +25,7 @@ import zipfile
 
 from gvxrPython3 import gvxr
 
+pbar = None;
 
 def downloadLungman():
 
@@ -40,7 +41,6 @@ def downloadLungman():
     zip_fname = os.path.join(lungman_path, "lungman_data.zip");
 
     if not os.path.exists(zip_fname):
-        pbar = None;
         def show_progress(block_num, block_size, total_size):
             global pbar
             if pbar is None:
@@ -76,15 +76,13 @@ def extractLungmanSTL(zip_fname, lungman_path):
     return stl_fname_set;
 
 
-def extractLungmanCT(zip_fname, lungman_path):
+def extractFilesFromZipFile(zip_fname, input_path, output_path, fnames):
     DICOM_fname_set = [];
 
-    DICOM_path = "CD2/DICOM/ST000000/SE000003/";
+    for DICOM_slice in fnames:
 
-    for DICOM_slice in ["CT000257", "CT000258", "CT000238", "CT000382"]:
-
-        input_DICOM_fname = os.path.join(DICOM_path, DICOM_slice);
-        output_DICOM_fname = os.path.join(lungman_path, DICOM_slice + ".dcm");
+        input_DICOM_fname = os.path.join(input_path, DICOM_slice);
+        output_DICOM_fname = os.path.join(output_path, DICOM_slice + ".dcm");
         DICOM_fname_set.append(output_DICOM_fname);
 
         with zipfile.ZipFile(zip_fname) as z:
@@ -95,6 +93,15 @@ def extractLungmanCT(zip_fname, lungman_path):
 
     return DICOM_fname_set;
 
+def extractLungmanCT(zip_fname, lungman_path):
+    DICOM_path = "CD2/DICOM/ST000000/SE000003/";
+    DICOM_fnames = ["CT000257", "CT000258", "CT000238", "CT000382"];
+    return extractFilesFromZipFile(zip_fname, DICOM_path, lungman_path, DICOM_fnames);
+
+def extractLungmanDX(zip_fname, lungman_path):
+    DICOM_path = "CD3/DICOM/ST000000/SE000000/";
+    DICOM_fnames = ["DX000000"];
+    return extractFilesFromZipFile(zip_fname, DICOM_path, lungman_path, DICOM_fnames);
 
 def loadLungmanMeshes(mesh_path):
     gvxr.removePolygonMeshesFromXRayRenderer();
