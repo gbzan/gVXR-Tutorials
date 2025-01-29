@@ -32,8 +32,13 @@ def downloadLungman():
     # where to save the data
     lungman_path = os.path.join("output_data", "lungman");
     mesh_path = os.path.join(lungman_path, "MESHES");
+    CT_path = os.path.join(lungman_path, "CT");
+
     if not os.path.exists(mesh_path):
         os.makedirs(mesh_path);    
+
+    if not os.path.exists(CT_path):
+        os.makedirs(CT_path);    
 
     # Download the data from [Zenodo](https://zenodo.org/records/10782644).
     zip_file_url = "https://zenodo.org/records/10782644/files/lungman_data.zip?download=1";
@@ -57,7 +62,7 @@ def downloadLungman():
         print("Download the file (%s) from %s\n" % (zip_fname, zip_file_url))
         urllib.request.urlretrieve(zip_file_url, zip_fname, show_progress)
 
-    return zip_fname, lungman_path, mesh_path
+    return zip_fname, lungman_path, mesh_path, CT_path
 
 def extractLungmanSTL(zip_fname, lungman_path):
     stl_fname_set = [];
@@ -93,10 +98,9 @@ def extractFilesFromZipFile(zip_fname, input_path, output_path, fnames):
 
     return DICOM_fname_set;
 
-def extractLungmanCT(zip_fname, lungman_path):
+def extractLungmanCT(zip_fname, CT_path, DICOM_fnames):
     DICOM_path = "CD2/DICOM/ST000000/SE000003/";
-    DICOM_fnames = ["CT000257", "CT000258", "CT000238", "CT000382"];
-    return extractFilesFromZipFile(zip_fname, DICOM_path, lungman_path, DICOM_fnames);
+    return extractFilesFromZipFile(zip_fname, DICOM_path, CT_path, DICOM_fnames);
 
 def extractLungmanDX(zip_fname, lungman_path):
     DICOM_path = "CD3/DICOM/ST000000/SE000000/";
@@ -139,6 +143,3 @@ def loadLungmanMeshes(mesh_path):
                 geometry_set[label]["Colour"][1] / 255.0,
                 geometry_set[label]["Colour"][2] / 255.0,
                 geometry_set[label]["Colour"][3]);
-
-            # We translate the geometry to make sure the detector is not within the patient
-            # gvxr.translateNode(label, 0, -118, 0, "mm")
