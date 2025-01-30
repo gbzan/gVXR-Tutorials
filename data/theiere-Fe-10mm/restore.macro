@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xactmacro version="1.0" xactrevision=" 22.11 2022-12-09">
+    <gui path="X:\2023-03\lbarricell\K03_4um" file="%n-%d.tiff" imager="Imager_2"/>
+    <point name="Point" action="Snapshot">
+        <object name="L1_Gen_Vertical">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="-830.0003681182861"/>
+            <property name="speed" type="double" value="20"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="L1_Gen_Zoom">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="-456.46661281585693"/>
+            <property name="speed" type="double" value="50"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="L1_Img_Zoom">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="899.1016316413879"/>
+            <property name="speed" type="double" value="50"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="L2_Gen_Vertical">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="-867.6728916168213"/>
+            <property name="speed" type="double" value="20"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="L2_Gen_Zoom">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="-596.2314176559448"/>
+            <property name="speed" type="double" value="50"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="L2_Img_Zoom">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="1539.997376203537"/>
+            <property name="speed" type="double" value="50"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="Rotation">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="720"/>
+            <property name="speed" type="double" value="80"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="Sample_X">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="0.0002899169921875"/>
+            <property name="speed" type="double" value="10"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="Sample_Z">
+            <property name="offset" type="double" value="0"/>
+            <property name="userLimit" type="string" value="min:;max:"/>
+            <property name="position" type="double" value="4.428958892822266"/>
+            <property name="speed" type="double" value="10"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="ExtendedTomo">
+            <property name="tomographyPosition" type="bool" value="true"/>
+            <property name="projectDir" type="string" value="X:\2023-07\jmletang\theiere_acier10mm_70um"/>
+            <property name="prefix" type="string" value="img_"/>
+            <property name="type" type="int" value="0"/>
+            <property name="typeOption" type="int" value="5"/>
+            <property name="imagers" type="string" value="Imager_2"/>
+            <property name="numberOfTurns" type="int" value="1"/>
+            <property name="numberOfImagesPerTurn" type="int" value="1504"/>
+            <property name="verticalStart" type="double" value="-867.6728916168213"/>
+            <property name="verticalEnd" type="double" value="-867.6728916168213"/>
+            <property name="sleepTimeBlack" type="int" value="0"/>
+            <property name="sleepTime" type="int" value="0"/>
+            <property name="sleepAfterMove" type="int" value="0"/>
+            <property name="switchOffXrays" type="bool" value="true"/>
+            <property name="runBlackCalibration" type="bool" value="false"/>
+            <property name="runGainCalibration" type="bool" value="false"/>
+            <property name="virtualCentering" type="bool" value="false"/>
+            <property name="centerX" type="double" value="0"/>
+            <property name="centerZ" type="double" value="0"/>
+            <property name="templateReconstructionXML" type="string" value=""/>
+            <property name="antiRingShift" type="bool" value="false"/>
+            <property name="beamAlignment" type="bool" value="false"/>
+            <property name="enableAuto" type="bool" value="false"/>
+            <property name="useCustomTurnParam" type="bool" value="false"/>
+            <property name="customTurnParam" type="string" value=""/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="XRay300_2">
+            <property name="voltage" type="int" value="260"/>
+            <property name="current" type="int" value="300"/>
+            <property name="focalMode" type="int" value="0"/>
+            <property name="xRayEnabled" type="bool" value="true"/>
+            <property name="timer" type="int" value="0"/>
+            <property name="filter" type="string" value="Fe 10 mm"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="Imager_1">
+            <property name="exposure" type="int" value="3"/>
+            <property name="gain" type="int" value="2"/>
+            <property name="mode" type="int" value="0"/>
+            <property name="fieldOfView" type="int" value="1"/>
+            <property name="shiftWidth" type="int" value="1"/>
+            <property name="shiftHeight" type="int" value="1"/>
+            <property name="margin" type="int" value="4"/>
+            <property name="horizontalCropRatio" type="double" value="0"/>
+            <property name="verticalCropRatio" type="double" value="0"/>
+            <property name="numOfCalFrames" type="int" value="60"/>
+            <property name="digitalGain" type="int" value="1"/>
+            <property name="rmMode" type="int" value="0"/>
+            <property name="avrFrames" type="int" value="6"/>
+            <property name="noAvrOnMove" type="bool" value="true"/>
+            <property name="lookUpTableData" type="string" value="(0;0;-1;0)(1;1;-1;0)"/>
+            <property name="filter" type="string" value="Filter"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+        <object name="Imager_2">
+            <property name="exposure" type="int" value="6"/>
+            <property name="gain" type="int" value="3"/>
+            <property name="mode" type="int" value="0"/>
+            <property name="fieldOfView" type="int" value="1"/>
+            <property name="shiftWidth" type="int" value="1"/>
+            <property name="shiftHeight" type="int" value="1"/>
+            <property name="margin" type="int" value="4"/>
+            <property name="horizontalCropRatio" type="double" value="0"/>
+            <property name="verticalCropRatio" type="double" value="0"/>
+            <property name="numOfCalFrames" type="int" value="30"/>
+            <property name="digitalGain" type="int" value="1"/>
+            <property name="rmMode" type="int" value="0"/>
+            <property name="avrFrames" type="int" value="1"/>
+            <property name="noAvrOnMove" type="bool" value="true"/>
+            <property name="lookUpTableData" type="string" value="(0.0556777;0;-1;0)(0.406838;1;-1;0)"/>
+            <property name="filter" type="string" value="Filter"/>
+            <property name="readyDelay" type="int" value="0"/>
+        </object>
+    </point>
+</xactmacro>
