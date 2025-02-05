@@ -1,0 +1,63 @@
+{
+    "File format version": [1, 0, 0],
+    "Window size": [500, 500],
+
+    "Detector": {
+        "Position": [0.0, 0.0, 457.474, "mm"],
+        "UpVector": [0.0, -1.0, 0.0],
+        "RightVector": [-1.0, 0.0, 0.0],
+        "NumberOfPixels": [2872, 2872],
+        "Spacing": [150.0, 150.0, "um"],
+        "Scintillator":
+        {
+            "Material": "Gd2O2S DRZ-Plus",
+            "Thickness": 210,
+            "Unit": "um"
+        }
+    },
+
+    "Source": {
+        "Position": [0.0, 0, -400.88, "mm"],
+        "Shape": "CONEBEAM",
+        "Beam": {
+            "Peak kilo voltage": 260,
+            "Tube angle": 12.0,
+            "mAs": 0.15,
+            "filter": [
+                ["Fe", 10, "mm"]
+            ],
+            "maxNumberOfEnergyBins": 50
+        }
+    },
+
+    "Samples": [
+        "moveToCentre",
+
+        {
+            "Label": "Teapot",
+            "Path": "models-teapot.stl",
+            "Unit": "mm",
+            "Material": ["Mixture", [
+                    26, 0.95,
+                    6, 0.03,
+                    14, 0.02
+                ]
+            ],
+            "Density": 6.675,
+            "AmbientColour": [0.0, 0.0, 0.0, 1.0],
+            "DiffuseColour": [0.0, 0.0, 0.0, 1.0],
+            "SpecularColour": [0.0, 0.0, 0.0, 1.0],
+            "Shininess": 20.0
+        }
+    ],
+
+    
+    "Scan": {
+        "NumberOfProjections": 1504,
+        "FinalAngle": 360,
+        "IncludeFinalAngle": false,
+        "CenterOfRotation": [0,0,0],
+        "RotationAxis": [0.0, -1.0, 0.0],
+        "OutFolder": "output_data/single_material-reproducing_CT_scan-JSON_file/Proj-simulated"
+    }
+}
