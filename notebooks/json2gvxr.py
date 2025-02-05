@@ -432,8 +432,10 @@ def getSpectrum(fname:str="", target_unit:str="keV", verbose:int=0):
                     else:
                         k, f, input_unit = getSpectrumSpekpy(kvp_in_kV, filters=filters, th_in_deg=th_in_deg)
 
-                # Resample the spectrum if needed
-                if has_skimage and "maxNumberOfEnergyBins" in params["Source"]["Beam"]:
+                # Resample the spectrum if needed and possible
+                if not has_skimage and "MaxNumberOfEnergyBins" in params["Source"]["Beam"]:
+                    print("MaxNumberOfEnergyBins was specified, but scikit-image is not installed. It'll be ignored.")
+                elif has_skimage and "MaxNumberOfEnergyBins" in params["Source"]["Beam"]:
 
                     # Get the old number of photons
                     old_total_number_of_photons = np.sum(f)
@@ -442,8 +444,8 @@ def getSpectrum(fname:str="", target_unit:str="keV", verbose:int=0):
                     old_number_of_bins = k.shape[0]
 
                     # Get what the new number of bins should be
-                    new_number_of_bins = int(params["Source"]["Beam"]["maxNumberOfEnergyBins"])
-
+                    new_number_of_bins = int(params["Source"]["Beam"]["MaxNumberOfEnergyBins"])
+                    print("maxNumberOfEnergyBins", old_number_of_bins, new_number_of_bins)
                     # There should be less than there currently are
                     # Resample the arrays
                     if new_number_of_bins < old_number_of_bins:
@@ -706,7 +708,6 @@ def initSamples(fname:str="", verbose:int=0):
 
     for mesh in mesh_source:
 
-
         if "Cube" in mesh:
             if verbose == 1:
                 print(mesh["Label"] + " is a cube")
@@ -771,7 +772,7 @@ def initSamples(fname:str="", verbose:int=0):
             );
 
         elif type(mesh) == str:
-            if mesh == "MoveToCenter" or mesh == "MoveToCentre":
+            if mesh == "MoveToCenter" or mesh == "MoveToCentre" or mesh == "moveToCenter" or mesh == "moveToCentre":
                 move_all_mesh_to_centre = True
 
         elif "SceneGraph" not in params:
@@ -848,7 +849,7 @@ def initSamples(fname:str="", verbose:int=0):
                     "g/cm3"
                 );
 
-            if "MoveToCenter" in mesh.keys() or "MoveToCentre" in mesh.keys():
+            if "MoveToCenter" in mesh.keys() or "MoveToCentre" in mesh.keys() or "moveToCenter" in mesh.keys() or "moveToCentre" in mesh.keys():
                 move_mesh_to_centre = True
             else:
                 move_mesh_to_centre = False
