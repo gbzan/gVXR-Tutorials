@@ -3,11 +3,11 @@
     "Window size": [500, 500],
 
     "Detector": {
-        "Position": [0.0, 0.0, 457.474, "mm"],
+        "Position": [0.0, 0.0, -457.474, "mm"],
         "UpVector": [0.0, -1.0, 0.0],
         "RightVector": [-1.0, 0.0, 0.0],
-        "NumberOfPixels": [2872, 2872],
-        "Spacing": [150.0, 150.0, "um"],
+        "NumberOfPixels": [718, 718],
+        "Spacing": [600.0, 600.0, "um"],
         "Scintillator":
         {
             "Material": "Gd2O2S DRZ-Plus",
@@ -17,7 +17,7 @@
     },
 
     "Source": {
-        "Position": [0.0, 0, -400.88, "mm"],
+        "Position": [0.0, 0, 400.88, "mm"],
         "Shape": "CONEBEAM",
         "Beam": {
             "Peak kilo voltage": 260,
@@ -26,30 +26,44 @@
             "filter": [
                 ["Fe", 10, "mm"]
             ],
-            "maxNumberOfEnergyBins": 50
+            "MaxNumberOfEnergyBins": 50
         }
     },
 
-    "Samples": [
-        "moveToCentre",
+  "Samples": [
+    "MoveToCentre",
 
-        {
-            "Label": "Teapot",
-            "Path": "models-teapot.stl",
-            "Unit": "mm",
-            "Material": ["Mixture", [
-                    26, 0.95,
-                    6, 0.03,
-                    14, 0.02
-                ]
-            ],
-            "Density": 6.675,
-            "AmbientColour": [0.0, 0.0, 0.0, 1.0],
-            "DiffuseColour": [0.0, 0.0, 0.0, 1.0],
-            "SpecularColour": [0.0, 0.0, 0.0, 1.0],
-            "Shininess": 20.0
-        }
-    ],
+    {
+      "Label": "Teapot",
+      "Path": "models-teapot-decimated.stl",
+      "Unit": "mm",
+      "Material": [
+        "Mixture",
+        [
+          26,
+          0.95,
+          6,
+          0.03,
+          14,
+          0.02
+        ]
+      ],
+      "Density": 5.5,
+      "AmbientColour": [ 0.20, 0.20, 0.20, 1.0 ],
+      "DiffuseColour": [ 0.0, 0.0, 0.0, 1.0 ],
+      "SpecularColour": [ 0.0, 0.0, 0.0, 1.0 ],
+      "Shininess": 20.0,
+      "Transform": [
+        [
+          "Rotation",
+          -90,
+          1,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
 
     
     "Scan": {

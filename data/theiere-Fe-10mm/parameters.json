@@ -7,7 +7,7 @@
         "UpVector": [0.0, -1.0, 0.0],
         "RightVector": [-1.0, 0.0, 0.0],
         "NumberOfPixels": [COLS, ROWS],
-        "Spacing": [150.0, 150.0, "um"],
+      "Spacing": [ PITCH, PITCH, "um" ],
         "Scintillator":
         {
             "Material": "Gd2O2S DRZ-Plus",
@@ -16,7 +16,7 @@
         }
     },
 
-                                        "Source": {
+                                      "Source": {
                                             "Position": [0.0, 0, MINUS SOD, "mm"],
                                             "Shape": "CONEBEAM",
         "Beam": {
@@ -26,7 +26,7 @@
             "filter": [
                 ["SYMBOL_OF_FILTER_MATERIAL", FILTER_THICKNESS, "THICKNESS_UNIT"]
             ],
-            "maxNumberOfEnergyBins": 50
+            "MaxNumberOfEnergyBins": 50
         }
     },
 
