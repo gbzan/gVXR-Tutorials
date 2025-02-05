@@ -1,4 +1,63 @@
 {
     "File format version": [1, 0, 0],
-    "Window size": [500, 500]
+    "Window size": [500, 500],
+
+    "Detector": {
+        "Position": [0.0, 0.0, ODD, "mm"],
+        "UpVector": [0.0, -1.0, 0.0],
+        "RightVector": [-1.0, 0.0, 0.0],
+        "NumberOfPixels": [COLS, ROWS],
+        "Spacing": [150.0, 150.0, "um"],
+        "Scintillator":
+        {
+            "Material": "Gd2O2S DRZ-Plus",
+            "Thickness": 210,
+            "Unit": "um"
+        }
+    },
+
+                                        "Source": {
+                                            "Position": [0.0, 0, MINUS SOD, "mm"],
+                                            "Shape": "CONEBEAM",
+        "Beam": {
+            "Peak kilo voltage": VOLTAGE_IN_kV,
+            "Tube angle": 12.0,
+            "mAs": mAS_IF_KNOWN,
+            "filter": [
+                ["SYMBOL_OF_FILTER_MATERIAL", FILTER_THICKNESS, "THICKNESS_UNIT"]
+            ],
+            "maxNumberOfEnergyBins": 50
+        }
+    },
+
+    "Samples": [
+        "moveToCentre",
+
+        {
+            "Label": "Teapot",
+            "Path": "models-teapot.stl",
+            "Unit": "mm",
+            "Material": ["Mixture", [
+                    26, 0.95,
+                    6, 0.03,
+                    14, 0.02
+                ]
+            ],
+            "Density": 6.675,
+            "AmbientColour": [0.0, 0.0, 0.0, 1.0],
+            "DiffuseColour": [0.0, 0.0, 0.0, 1.0],
+            "SpecularColour": [0.0, 0.0, 0.0, 1.0],
+            "Shininess": 20.0
+        }
+    ],
+
+    
+    "Scan": {
+        "NumberOfProjections": NUMBER_OF_PROJECTION,
+        "FinalAngle": 360,
+        "IncludeFinalAngle": false,
+        "CenterOfRotation": [0,0,0],
+        "RotationAxis": [SAME_AS_UpVector_OF_DETECTOR],
+        "OutFolder": "WHERE_TO_SAVE_PROJECTIONS"
+    }
 }
