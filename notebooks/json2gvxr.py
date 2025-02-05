@@ -433,7 +433,7 @@ def getSpectrum(fname:str="", target_unit:str="keV", verbose:int=0):
                         k, f, input_unit = getSpectrumSpekpy(kvp_in_kV, filters=filters, th_in_deg=th_in_deg)
 
                 # Resample the spectrum if needed
-                if has_skimage and "maxEnergyBinNumber" in params["Source"]["Beam"]:
+                if has_skimage and "maxNumberOfEnergyBins" in params["Source"]["Beam"]:
 
                     # Get the old number of photons
                     old_total_number_of_photons = np.sum(f)
@@ -442,7 +442,7 @@ def getSpectrum(fname:str="", target_unit:str="keV", verbose:int=0):
                     old_number_of_bins = k.shape[0]
 
                     # Get what the new number of bins should be
-                    new_number_of_bins = int(params["Source"]["Beam"]["maxEnergyBinNumber"])
+                    new_number_of_bins = int(params["Source"]["Beam"]["maxNumberOfEnergyBins"])
 
                     # There should be less than there currently are
                     # Resample the arrays
