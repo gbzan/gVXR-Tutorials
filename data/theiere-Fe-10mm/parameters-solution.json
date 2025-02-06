@@ -1,21 +1,20 @@
 {
     "File format version": [1, 0, 0],
     "Window size": [500, 500],
-
+    
     "Detector": {
         "Position": [0.0, 0.0, -457.474, "mm"],
         "UpVector": [0.0, -1.0, 0.0],
         "RightVector": [-1.0, 0.0, 0.0],
         "NumberOfPixels": [718, 718],
         "Spacing": [600.0, 600.0, "um"],
-        "Scintillator":
-        {
+        "Scintillator": {
             "Material": "Gd2O2S DRZ-Plus",
             "Thickness": 210,
             "Unit": "um"
         }
     },
-
+    
     "Source": {
         "Position": [0.0, 0, 400.88, "mm"],
         "Shape": "CONEBEAM",
@@ -29,49 +28,38 @@
             "MaxNumberOfEnergyBins": 50
         }
     },
-
-  "Samples": [
-    "MoveToCentre",
-
-    {
-      "Label": "Teapot",
-      "Path": "models-teapot-decimated.stl",
-      "Unit": "mm",
-      "Material": [
-        "Mixture",
-        [
-          26,
-          0.95,
-          6,
-          0.03,
-          14,
-          0.02
-        ]
-      ],
-      "Density": 5.5,
-      "AmbientColour": [ 0.20, 0.20, 0.20, 1.0 ],
-      "DiffuseColour": [ 0.0, 0.0, 0.0, 1.0 ],
-      "SpecularColour": [ 0.0, 0.0, 0.0, 1.0 ],
-      "Shininess": 20.0,
-      "Transform": [
-        [
-          "Rotation",
-          -90,
-          1,
-          0,
-          0
-        ]
-      ]
-    }
-  ],
-
+    
+    "Samples": [
+        "MoveToCentre",
+        
+        {
+            "Label": "Teapot",
+            "Path": "models-teapot-decimated.stl",
+            "Unit": "mm",
+            "Material": [
+                "Mixture", [
+                    26, 0.95,
+                    6, 0.03,
+                    14, 0.02
+                ]
+            ],
+            "Density": 5.5,
+            "AmbientColour": [ 0.20, 0.20, 0.20, 1.0 ],
+            "DiffuseColour": [ 0.0, 0.0, 0.0, 1.0 ],
+            "SpecularColour": [ 0.0, 0.0, 0.0, 1.0 ],
+            "Shininess": 20.0,
+            "Transform": [
+                ["Rotation", -90, 1, 0, 0]
+            ]
+        }
+    ],
     
     "Scan": {
-        "NumberOfProjections": 1504,
+        "NumberOfProjections": 200,
         "FinalAngle": 360,
         "IncludeFinalAngle": false,
         "CenterOfRotation": [0,0,0],
         "RotationAxis": [0.0, -1.0, 0.0],
-        "OutFolder": "output_data/single_material-reproducing_CT_scan-JSON_file/Proj-simulated"
+        "OutFolder": "../notebooks/output_data/single_material-reproducing_CT_scan-JSON_file/Proj-simulated"
     }
 }
