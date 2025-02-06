@@ -3,8 +3,8 @@
     "Window size": [500, 500],
     
     "Detector": {
-        "Position": [0.0, 0.0, -457.474, "mm"],
-        "UpVector": [0.0, -1.0, 0.0],
+        "Position": [0.0, 457.474, 0.0, "mm"],
+        "UpVector": [0.0, 0.0, -1.0],
         "RightVector": [-1.0, 0.0, 0.0],
         "NumberOfPixels": [718, 718],
         "Spacing": [600.0, 600.0, "um"],
@@ -16,7 +16,7 @@
     },
     
     "Source": {
-        "Position": [0.0, 0, 400.88, "mm"],
+        "Position": [0.0, -400.88, 0.0, "mm"],
         "Shape": "CONEBEAM",
         "Beam": {
             "Peak kilo voltage": 260,
@@ -47,10 +47,7 @@
             "AmbientColour": [ 0.20, 0.20, 0.20, 1.0 ],
             "DiffuseColour": [ 0.0, 0.0, 0.0, 1.0 ],
             "SpecularColour": [ 0.0, 0.0, 0.0, 1.0 ],
-            "Shininess": 20.0,
-            "Transform": [
-                ["Rotation", -90, 1, 0, 0]
-            ]
+            "Shininess": 20.0
         }
     ],
     
@@ -59,7 +56,7 @@
         "FinalAngle": 360,
         "IncludeFinalAngle": false,
         "CenterOfRotation": [0,0,0],
-        "RotationAxis": [0.0, -1.0, 0.0],
+        "RotationAxis": [0.0, 0.0, -1.0],
         "OutFolder": "../notebooks/output_data/single_material-reproducing_CT_scan-JSON_file/Proj-simulated"
     }
 }

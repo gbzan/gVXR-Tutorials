@@ -3,8 +3,8 @@
     "Window size": [500, 500],
     
     "Detector": {
-        "Position": [0.0, 0.0, MINUS ODD, "mm"],
-        "UpVector": [0.0, -1.0, 0.0],
+        "Position": [0.0, ODD, 0.0, "mm"],
+        "UpVector": [0.0, 0.0, -1.0],
         "RightVector": [-1.0, 0.0, 0.0],
         "NumberOfPixels": [COLS, ROWS],
         "Spacing": [PITCH, PITCH, "um"],
@@ -16,7 +16,7 @@
     },
     
     "Source": {
-        "Position": [0.0, 0, SOD, "mm"],
+        "Position": [0.0, MINUS SOD, 0.0, "mm"],
         "Shape": "CONEBEAM",
         "Beam": {
             "Peak kilo voltage": VOLTAGE_IN_kV,
@@ -47,10 +47,7 @@
             "AmbientColour": [ 0.20, 0.20, 0.20, 1.0 ],
             "DiffuseColour": [ 0.0, 0.0, 0.0, 1.0 ],
             "SpecularColour": [ 0.0, 0.0, 0.0, 1.0 ],
-            "Shininess": 20.0,
-            "Transform": [
-                ["Rotation", -90, 1, 0, 0]
-            ]
+            "Shininess": 20.0
         }
     ],
     
