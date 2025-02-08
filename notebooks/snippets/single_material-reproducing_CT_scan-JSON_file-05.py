@@ -24,6 +24,11 @@ print("Exposure:", mAs, "mAs")
 
 pixel_pitch_in_um = [150, 150]
 
+projection_number_of_rows = raw_radiograph_reference.shape[0]
+projection_number_of_cols = raw_radiograph_reference.shape[1]
+
+print("Image size:", str(projection_number_of_cols) + "x" + str(projection_number_of_rows), "pixels")
+
 import pandas as pd
 from IPython.display import display, HTML
 
