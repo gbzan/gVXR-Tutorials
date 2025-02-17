@@ -13,21 +13,14 @@ dependencies:
     - numpy
     - pandas
     - python=3.11
-    # - scikit-image
     - SimpleITK
-    - k3d
     - cil
     - ccpi-regulariser
-    # - ipp=2021.12
     - astra-toolbox=*=cuda*
     - tigre
     - progressbar
+    - k3d
     - pip
     - pip:
-        # - urllib3
-        # - zipfile
         - viewscad
-        - xpecgen
-        - spekpy
-        - gvxr>=2.0.8
-
+        - gvxr>=2.0.10
