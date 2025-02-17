@@ -72,6 +72,9 @@ pip install matplotlib viewscad xpecgen spekpy SimpleITK k3d
     - For **low dose** CT scans, you may look at [Low dose CT scan](notebooks/multi_material-CT_scan-low_dose.ipynb) where you can control the noise level and the number of projections.
 - Spectral CT imaging:
 - 2D-3D registration of a clinical digital radiograph:
+- Laminography:
+- Helical CT scans:
+
 
 ## How to find help
 
