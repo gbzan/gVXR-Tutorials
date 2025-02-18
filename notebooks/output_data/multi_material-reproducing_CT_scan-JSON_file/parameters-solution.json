@@ -1,0 +1,59 @@
+{
+    "File format version": [1, 0, 0],
+    "Window size": [500, 500],
+    
+    "Detector": {
+        "Position": [0.0, 460.1247, 0.0, "mm"],
+        "UpVector": [0.0, 0.0, -1.0],
+        "RightVector": [-1.0, 0.0, 0.0],
+        "NumberOfPixels": [1912, 1912],
+        "Spacing": [150.0, 150.0, "um"],
+        "Scintillator": {
+            "Material": "Gd2O2S DRZ-Plus",
+            "Thickness": 210,
+            "Unit": "um"
+        }
+    },
+    
+    "Source": {
+        "Position": [0.0, -60.9223, 0.0, "mm"],
+        "Shape": "CONEBEAM",
+        "Beam": {
+            "Peak kilo voltage": 160,
+            "Tube angle": 12.0,
+            "mAs": 0.066267,
+            "filter": [
+                ["Cu", 2, "mm"]
+            ],
+            "MaxNumberOfEnergyBins": 50
+        }
+    },
+    
+    "Samples": [
+        "MoveToCentre",
+        
+        {
+            "Label": "wires",
+            "Path": "../multi_material-CT_scan/wires.stl",
+            "Unit": "mm",
+            "Material": ["Element", "Cu"]
+        },
+
+        {
+            "Label": "stealh",
+            "Path": "../multi_material-CT_scan/insulation.stl",
+            "Unit": "mm",
+            "Material": ["Compound", "C2H3Cl"],
+            "Density": 1.3
+        }
+    ],
+    
+    "Scan": {
+        "NumberOfProjections": 200,
+        "FinalAngle": 360,
+        "IncludeFinalAngle": false,
+        "CenterOfRotation": [0,0,0],
+        "RotationAxis": [0.0, 0.0, -1.0],
+        "OutFolder": "../notebooks/output_data/multi_material-reproducing_CT_scan-JSON_file/Proj-simulated"
+    }
+}
