@@ -50,6 +50,28 @@ pip install gvxr
 pip install matplotlib viewscad xpecgen spekpy SimpleITK k3d
 ```
 
+## Installation Notes
+1. Haoran Liu reset the VPN proxy
+2. A channel has problem in the .yml file --  https://software.repos.intel.com/python/conda. It was used in cil package
+   ### remove it and install cil locally later
+3. create env using ```mamba env create```  instead of ```conda env create```: ```mamba env create -f environment.yml ```
+4. Install cil package:
+   ### 1. 克隆 CIL 仓库并切换 tag
+```
+git clone --recursive https://github.com/TomographicImaging/CIL.git
+cd CIL
+git checkout v24.3.0
+git submodule update --init --recursive  # 如果这步慢就可以反复重试直到成功
+```
+
+   ### 2. 安装（开发模式或者正式安装都可）
+    pip install .
+   #### 或开发模式：
+    pip install -e .
+5. 
+6. 
+
+
 ## Content of this repository
 
 - [Cheat sheet](CHEAT_SHEET.md): This document list all gVXR's functions used in the tutorial notebooks. It also includes the help messages to describe the purpose of each function.
